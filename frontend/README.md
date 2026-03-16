@@ -1,16 +1,73 @@
-# React + Vite
+## Frontend – Proyecto Final Full Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el frontend del **Proyecto Final Full Stack**, desarrollado con **React** y **Vite**.
+Incluye autenticación de usuarios, gestión de publicaciones y vistas protegidas.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Registro e inicio de sesión de usuarios
+- Persistencia de sesión mediante contexto de autenticación
+- Listado de publicaciones en formato galería
+- Detalle de una publicación individual
+- Creación de nuevas publicaciones
+- Página de perfil de usuario
+- Diseño responsive básico
 
-## React Compiler
+## Requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js (versión 18 o superior recomendada)
+- npm (incluido con Node.js)
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Desde la carpeta `frontend`:
+
+```bash
+npm install
+```
+
+## Scripts disponibles
+
+- Iniciar el servidor de desarrollo:
+
+	```bash
+	npm run dev
+	```
+
+- Crear build de producción:
+
+	```bash
+	npm run build
+	```
+
+- Previsualizar la build de producción:
+
+	```bash
+	npm run preview
+	```
+
+## Configuración de la API (opcional)
+
+Si el proyecto consume un backend externo, puedes definir la URL base de la API
+mediante variables de entorno de Vite, por ejemplo:
+
+```bash
+VITE_API_URL=http://localhost:3000
+```
+
+(colócala en un archivo `.env` en la carpeta `frontend`, si la aplicación lo requiere).
+
+## Estructura general
+
+- Código fuente de React en `src/`
+- Páginas principales (Home, Login, Registro, Perfil, etc.)
+- Contexto de autenticación para proteger rutas y gestionar el usuario
+- Estilos globales y componentes de layout reutilizables
+
+## Desarrollo conjunto con el backend
+
+Para trabajar en modo full stack:
+
+1. Arranca el backend (Node/Express) en su carpeta correspondiente.
+2. Arranca este frontend con `npm run dev`.
+3. Asegúrate de que la URL configurada en la app (o en `VITE_API_URL`) apunte al backend en ejecución.
