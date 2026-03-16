@@ -1,2 +1,15 @@
-Hito 1 del proyecto final Full Stack: diseño y prototipo de un marketplace, incluyendo boceto de vistas (públicas y privadas), definición de rutas de navegación, modelo relacional de base de datos (usuarios, publicaciones, imágenes y favoritos), contrato de la API REST y listado de dependencias para frontend (React/Vite) y backend (Node/Express).
+Proyecto Final - Marketplace (Hito 1)
+Este repositorio contiene la estructura base del proyecto Marketplace para el Hito 1.
 
+Estructura
+frontend/: aplicación React con Vite, rutas básicas y maquetas de todas las vistas requeridas.
+backend/: API REST con Express, rutas definidas según el contrato de datos (maqueta en memoria).
+Instalación rápida
+Frontend
+cd frontend
+npm install
+npm run dev
+Backend
+cd backend
+npm install
+npm run dev
